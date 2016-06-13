@@ -106,9 +106,9 @@ URL:      www.noaesthetic.com
    <Variable name="body.background.override" description="Body Background Override" type="string" default="" value=""/>
 
    <Variable name="body.background.gradient.cap" description="Body Gradient Cap" type="url"
-       default="url(//www.blogblog.com/1kt/simple/gradients_light.png)" value="url(//www.blogblog.com/1kt/simple/gradients_light.png)"/>
+       default="url(https://www.blogblog.com/1kt/simple/gradients_light.png)" value="url(//www.blogblog.com/1kt/simple/gradients_light.png)"/>
    <Variable name="body.background.gradient.tile" description="Body Gradient Tile" type="url"
-       default="url(//www.blogblog.com/1kt/simple/body_gradient_tile_light.png)" value="url(//www.blogblog.com/1kt/simple/body_gradient_tile_light.png)"/>
+       default="url(https://www.blogblog.com/1kt/simple/body_gradient_tile_light.png)" value="url(//www.blogblog.com/1kt/simple/body_gradient_tile_light.png)"/>
 
    <Variable name="content.background.color.selector" description="Content Background Color Selector" type="string" default=".content-inner" value=".content-inner"/>
    <Variable name="content.padding" description="Content Padding" type="length" default="10px" min="0" max="100px" value="10px"/>
@@ -134,7 +134,7 @@ URL:      www.noaesthetic.com
    <Variable name="tabs.margin.top" description="Tabs Margin Top" type="length" default="0" min="0" max="100px" value="0"/>
    <Variable name="tabs.margin.side" description="Tabs Side Margin" type="length" default="30px" min="0" max="100px" value="30px"/>
    <Variable name="tabs.background.gradient" description="Tabs Background Gradient" type="url"
-       default="url(//www.blogblog.com/1kt/simple/gradients_light.png)" value="url(//www.blogblog.com/1kt/simple/gradients_light.png)"/>
+       default="url(https://www.blogblog.com/1kt/simple/gradients_light.png)" value="url(//www.blogblog.com/1kt/simple/gradients_light.png)"/>
    <Variable name="tabs.border.width" description="Tabs Border Width" type="length" default="1px" min="0" max="10px" value="1px"/>
    <Variable name="tabs.bevel.border.width" description="Tabs Bevel Border Width" type="length" default="1px" min="0" max="10px" value="1px"/>
 
@@ -212,8 +212,6 @@ a:hover {
   z-index: 1;
   height: 400px;
   width: 100%;
-  background: $(body.background);
-  $(body.background.override)
 }
 
 .body-fauxcolumn-outer .cap-top .cap-left {
@@ -647,14 +645,11 @@ body.mobile  {
       ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
-	<script type='text/javascript'>
-	var Category_Name = [&quot;CCNP&quot;,&quot;Switching&quot;];
-	</script>
   </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
-    <b:widget id='Navbar1' locked='true' title='導覽列' type='Navbar'>
+    <b:widget id='Navbar1' locked='true' title='導覽列' type='Navbar' visible='true'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -668,16 +663,16 @@ body.mobile  {
 &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-            gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0754188858433369797748\46blogName\75SamComLearning\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://samcomlearning.blogspot.com/search\46blogLocale\75zh_TW\46v\0752\46homepageUrl\75http://samcomlearning.blogspot.com/\46vt\75-370509987533065645&#39;,
-                where: document.getElementById(&quot;navbar-iframe-container&quot;),
-                id: &quot;navbar-iframe&quot;
-            });
-          }
-        });
-      &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d4188858433369797748\x26blogName\x3dSamComLearning\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://samcomlearning.blogspot.com/search\x26blogLocale\x3dzh_TW\x26v\x3d2\x26homepageUrl\x3dhttps://samcomlearning.blogspot.com/\x26vt\x3d218726738418567753&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
 (function() {
 var script = document.createElement(&#39;script&#39;);
 script.type = &#39;text/javascript&#39;;
@@ -756,7 +751,7 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='SamComLearning (標頭)' type='Header'>
+        <b:widget id='Header1' locked='true' title='SamComLearning (標頭)' type='Header' visible='true'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -833,6 +828,47 @@ head.appendChild(script);
       <div class='cap-right'/>
     </div>
     </div>
+
+<!-- extra code for typing math symbol -->
+<script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'/>
+<!-- extra code for typing math symbol -->
+
+    <!-- Syntax Highlighter Additions START -->
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeEmacs.css" rel="stylesheet" type="text/css" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript" />
+
+    <script src="https://dl.dropboxusercontent.com/u/82912130/shBrushCpp2.js" type="text/javascript" />
+<!-- when you need it, download the file then and put it in your dropbox. Thank you for your cooperation
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushAS3.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushColdFusion.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCSharp.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCpp.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDelphi.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDiff.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushErlang.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushGroovy.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJavaFX.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPerl.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPlain.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPowerShell.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushRuby.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushScala.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushSql.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushVb.js" type="text/javascript" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript" />
+-->
+    <script language="javascript" type="text/javascript">
+     SyntaxHighlighter.config.bloggerMode = true;
+     SyntaxHighlighter.all();
+    </script>
+    <!-- Syntax Highlighter Additions END -->
     </header>
 
     <div class='tabs-outer'>
@@ -919,7 +955,7 @@ head.appendChild(script);
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' name='Main' showaddelement='no'>
-            <b:widget id='Blog1' locked='true' title='網誌文章' type='Blog'>
+            <b:widget id='Blog1' locked='true' title='網誌文章' type='Blog' visible='true'>
               <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
@@ -975,7 +1011,7 @@ head.appendChild(script);
               <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='//www.blogger.com/img/icon_delete13.gif'/>
+      <img src='https://img1.blogblog.com/img/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
@@ -1037,14 +1073,14 @@ head.appendChild(script);
       </div>
     <b:else/>
       <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-        <img src='//www.blogger.com/img/icon_delete13.gif'/>
+        <img src='https://img1.blogblog.com/img/icon_delete13.gif'/>
       </a>
     </b:if>
   </span>
 </b:includable>
               <b:includable id='comment_count_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
     </span>
   <b:else/>
     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
@@ -1200,7 +1236,7 @@ head.appendChild(script);
 
   <b:if cond='data:post.allowIframeComments'>
     <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
-    <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
+    <div class='cmt_iframe_holder' expr:data-href='data:post.url.canonical' expr:data-viewtype='data:post.viewType'/>
 
     <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
       <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
@@ -1350,7 +1386,7 @@ head.appendChild(script);
                 <b:if cond='data:top.showTimestamp'>
                   <data:top.timestampLabel/>
                   <b:if cond='data:post.url'>
-                    <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
                     <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
                   </b:if>
                 </b:if>
@@ -1464,7 +1500,7 @@ head.appendChild(script);
         <b:if cond='data:top.showTimestamp'>
           <data:top.timestampLabel/>
           <b:if cond='data:post.url'>
-            <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+            <meta expr:content='data:post.url.canonical' itemprop='url'/>
             <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
           </b:if>
         </b:if>
@@ -1497,7 +1533,7 @@ head.appendChild(script);
         <b:if cond='data:post.emailPostUrl'>
           <span class='item-action'>
           <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
-            <img alt='' class='icon-action' height='13' src='//img1.blogblog.com/img/icon18_email.gif' width='18'/>
+            <img alt='' class='icon-action' height='13' src='https://img1.blogblog.com/img/icon18_email.gif' width='18'/>
           </a>
           </span>
         </b:if>
@@ -1552,7 +1588,7 @@ head.appendChild(script);
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='//img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+        <img alt='' class='icon-action' height='18' src='https://img1.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
       </a>
     </span>
   </b:if>
@@ -1875,7 +1911,7 @@ head.appendChild(script);
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
-        <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
+        <b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
           <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
       <div class='mobile-survey-link' style='text-align: center;'>
@@ -1959,13 +1995,26 @@ head.appendChild(script);
 </macro:includable>
 
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='Label1' locked='false' title='網站導覽' type='Label'>
+  <b:widget id='HTML1' locked='false' title='' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='Label1' locked='false' title='網站導覽' type='Label' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
-    <h2><div id="treeLabel_toggle"><a href="http://wayne-fu.blogspot.com/2013/01/multi-tree-label-update.html" target="_blank"><img class="post-img" src="http://2.bp.blogspot.com/-nn8uU4LhVtM/T8cdzYQnUZI/AAAAAAAACos/JcGy8V05y84/s1600/info.png"/></a></div><data:title/></h2>
+    <h2><div id='treeLabel_toggle'><a href='http://wayne-fu.blogspot.com/2013/01/multi-tree-label-update.html' target='_blank'><img class='post-img' src='http://2.bp.blogspot.com/-nn8uU4LhVtM/T8cdzYQnUZI/AAAAAAAACos/JcGy8V05y84/s1600/info.png'/></a></div><data:title/></h2>
   </b:if>
   <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-<div id="treeLabel_main" style="font-family: Arial;"><span id="treeLabel_host" class="item-control blog-admin"></span></div>
+<div id='treeLabel_main' style='font-family: Arial;'><span class='item-control blog-admin' id='treeLabel_host'/></div>
  
 <style>
 #treeLabel_toggle {
@@ -1998,12 +2047,12 @@ head.appendChild(script);
 <script>
 //<![CDATA[
 var treeLabel = {
-  category: ["CCNP", "Switching"], // 雙引號內填入大分類名稱, 每個大分類用小寫逗號隔開, 最後一個大分類之後不可有逗號; 填入順序就是顯示的順序
+  category: ["本站僅為個人學習筆記","程式設計", "資工" , "英文", "架站", "其他"], // 雙引號內填入大分類名稱, 每個大分類用小寫逗號隔開, 最後一個大分類之後不可有逗號; 填入順序就是顯示的順序
   showLevel: 2,  // 預設打開的標籤層數, 填入 1 為全部收起的狀態
   showCategoryCount: "Y",  // 大分類若不顯示文章數, 請填入 "N"
   openLogo: "▼",  // 如使用圖檔,雙引號內請填入 http 開頭的網址
-  closeLogo: "?",  // 如使用圖檔,雙引號內請填入 http 開頭的網址
-  listLogo: "?",  // 如使用圖檔,雙引號內請填入 http 開頭的網址
+  closeLogo: "►",  // 如使用圖檔,雙引號內請填入 http 開頭的網址
+  listLogo: "⇢",  // 如使用圖檔,雙引號內請填入 http 開頭的網址
   margin: 10,  // 縮排的像素值
   openText: "全展開",  // 可改為自訂文字, 不顯示文字請改為 ""
   closeText: "全收合",  // 可改為自訂文字, 不顯示文字請改為 "&nbsp;"
@@ -2017,15 +2066,15 @@ treeLabel.labelName = [];
 <b:loop values='data:labels' var='label'>
  
 (function ()  {
-  var a = "<data:label.name/>",
-      b = a.split("-"),
+  var a = &quot;<data:label.name/>&quot;,
+      b = a.split(&quot;-&quot;),
       l = b.length,
       data = [],
       i;
 //<![CDATA[
 for(i=0;i<l;i++){if(i!=0&&i!=l-1&&b[i].search(" ")!=0){b[i]=" "+b[i]}data[i]=b[i]};
 //]]>
-  treeLabel.data.push([data, "<data:blog.languageDirection/>", "<data:label.url/>", "<data:label.count/>"]);
+  treeLabel.data.push([data, &quot;<data:blog.languageDirection/>&quot;, &quot;<data:label.url/>&quot;, &quot;<data:label.count/>&quot;]);
 } )();
  
 </b:loop>
@@ -2038,7 +2087,7 @@ treeLabel.dg=function(a){return document.getElementById(a)};treeLabel.toggle=fun
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='網誌存檔' type='BlogArchive'>
+  <b:widget id='BlogArchive1' locked='false' title='網誌存檔' type='BlogArchive' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
