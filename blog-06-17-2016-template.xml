@@ -578,6 +578,23 @@ body.mobile  {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.border.color);
 }
+/*make table look nice */
+table.mytable {
+	font-size: 12px;
+	border: 1px solid #CCC; 
+	font-family: Arial, Helvetica, sans-serif;
+} 
+.mytable td {
+	padding: 4px;
+	margin: 3px;
+	border: 1px solid #CCC;
+}
+.mytable th {
+	background-color: #104E8B; 
+	color: #FFF;
+	font-weight: bold;
+}
+/*make table look nice */
 ]]></b:skin>
 
     <b:template-skin>
@@ -1011,7 +1028,7 @@ head.appendChild(script);
               <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='https://img1.blogblog.com/img/icon_delete13.gif'/>
+      <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
@@ -1073,7 +1090,7 @@ head.appendChild(script);
       </div>
     <b:else/>
       <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-        <img src='https://img1.blogblog.com/img/icon_delete13.gif'/>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
       </a>
     </b:if>
   </span>
@@ -1533,7 +1550,7 @@ head.appendChild(script);
         <b:if cond='data:post.emailPostUrl'>
           <span class='item-action'>
           <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
-            <img alt='' class='icon-action' height='13' src='https://img1.blogblog.com/img/icon18_email.gif' width='18'/>
+            <img alt='' class='icon-action' height='13' src='https://resources.blogblog.com/img/icon18_email.gif' width='18'/>
           </a>
           </span>
         </b:if>
@@ -1588,7 +1605,7 @@ head.appendChild(script);
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='https://img1.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+        <img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
       </a>
     </span>
   </b:if>
