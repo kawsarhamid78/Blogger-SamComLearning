@@ -1,2 +1,2 @@
 # Blogger-SamComLearning
-Back up Bloggger template
+Back up Bloggger template & content
